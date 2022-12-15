@@ -1,4 +1,4 @@
-package com.rh.movieinfo;
+package com.rh.moviecatalogueservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,17 +9,16 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class MovieInfoApplication {
+public class MovieCatalogueApplication {
 
-	
 	@Bean
 	@LoadBalanced
 	public RestTemplate getRestTemplate() {
-		return new RestTemplate();
+		return  new RestTemplate();
 	}
 	
 	public static void main(String[] args) {
-		SpringApplication.run(MovieInfoApplication.class, args);
+		SpringApplication.run(MovieCatalogueApplication.class, args);
 	}
 
 }
